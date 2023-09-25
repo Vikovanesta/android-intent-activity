@@ -26,8 +26,8 @@ class HomeActivity : AppCompatActivity() {
                 val phone = data?.getStringExtra(EXTRA_PHONE)
 
                 binding.textWelcome.text = "Welcome $username"
-                binding.textEmailActivated.text = "Your $email has been activated"
-                binding.textPhoneRegistered.text = "Your $phone has been registered"
+                binding.textEmailActivated.text = "Your email ($email) has been activated"
+                binding.textPhoneRegistered.text = "Your phone ($phone) has been registered"
             }
         }
 
@@ -41,8 +41,8 @@ class HomeActivity : AppCompatActivity() {
 
         with(binding) {
             textWelcome.text = "Welcome $username"
-            textEmailActivated.text = "Your $email has been activated"
-            textPhoneRegistered.text = "Your $phone has been registered"
+            textEmailActivated.text = "Your email ($email) has been activated"
+            textPhoneRegistered.text = "Your phone ($phone) has been registered"
 
 //            btnToThird.setOnClickListener {
 //                val intent = Intent(
