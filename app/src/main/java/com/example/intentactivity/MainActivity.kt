@@ -10,6 +10,7 @@ import com.example.intentactivity.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     companion object {
         const val EXTRA_USERNAME = "extra_username"
         const val EXTRA_EMAIL = "extra_email"
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
             // Go to second activity
-            btnRegister.setOnClickListener{
+            btnRegister.setOnClickListener {
                 val intentToHomeActivity =
                     Intent(
                         this@MainActivity,
@@ -32,12 +33,32 @@ class MainActivity : AppCompatActivity() {
                 val username = editTextUsername.text.toString()
                 val email = editTextEmail.text.toString()
                 val phone = editTextPhone.text.toString()
+                val password = editTextPassword.text.toString()
 
                 intentToHomeActivity.putExtra(EXTRA_USERNAME, username)
                 intentToHomeActivity.putExtra(EXTRA_EMAIL, email)
                 intentToHomeActivity.putExtra(EXTRA_PHONE, phone)
 
-                startActivity(intentToHomeActivity)
+                if (username.isNotEmpty() && email.isNotEmpty() && phone.isNotEmpty() && password.isNotEmpty() && checkBox.isChecked) {
+                    startActivity(intentToHomeActivity)
+                }
+                if (username.isEmpty()) {
+                    editTextUsername.error = "Username tidak boleh kosong"
+                }
+                if (email.isEmpty()) {
+                    editTextEmail.error = "Email tidak boleh kosong"
+                }
+                if (phone.isEmpty()) {
+                    editTextPhone.error = "Phone number tidak boleh kosong"
+                }
+                if (password.isEmpty()) {
+                    editTextPassword.error = "Password tidak boleh kosong"
+                }
+                if (!checkBox.isChecked) {
+                    checkBox.error = "Anda harus menyetujui syarat dan ketentuan"
+                }
+
+
             }
 
             // Make a clickable span
@@ -52,6 +73,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intentToLoginActivity)
                 }
             }
+
             spannableString.setSpan(clickableSpan, 25, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
             textViewRedirectLogin.text = spannableString
             textViewRedirectLogin.movementMethod = LinkMovementMethod.getInstance()

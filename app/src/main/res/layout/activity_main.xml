@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
-            android:text="Register"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/register"
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -32,8 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="24dp"
+            android:autofillHints="username"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Username"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/username"
             android:paddingHorizontal="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,12 +48,14 @@
             android:layout_height="48dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Email"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingHorizontal="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="emailAddress" />
 
         <EditText
             android:id="@+id/edit_text_phone"
@@ -58,20 +63,24 @@
             android:layout_height="48dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Phone"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/phone"
             android:inputType="phone"
             android:paddingHorizontal="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="phone" />
 
         <EditText
             android:id="@+id/edit_text_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="16dp"
+            android:autofillHints="password"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Password"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingHorizontal="32dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +91,8 @@
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By checking the box you agree to our Terms and Conditions."
+            android:fontFamily="@font/poppins"
+            android:text="@string/terms_and_conditions"
             android:textSize="11sp"
             tools:layout_editor_absoluteX="157dp"
             tools:layout_editor_absoluteY="569dp" />
@@ -104,7 +114,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
             android:background="@drawable/rounded_btn"
-            android:text="Register"
+            android:fontFamily="@font/poppins"
+            android:text="@string/register"
             android:textSize="16sp"
             app:backgroundTint="#525BFF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +126,8 @@
             android:id="@+id/text_view_redirect_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Already Have an Account? Log in"
+            android:fontFamily="@font/poppins"
+            android:text="@string/already_have_an_account_log_in"
             android:textAlignment="center" />
 
     </LinearLayout>
